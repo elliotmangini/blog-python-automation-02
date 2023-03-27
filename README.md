@@ -1,15 +1,10 @@
-<h1>Script to Find and Copy Newest Files to a New Folder</h1>
+<h1>How to Find and Copy Newest Version of Files to a New Folder</h1>
 
 Have you ever had a cluttered music production folder with dozens of song folders, each containing multiple versions and bounces of the same song? It can be difficult and time-consuming to sift through all those files and determine which is the most recent version. That's where this script comes in handy!
 
 This script will scan through your current directory and its subdirectories, find the newest audio bounce of each song, and copy it to a new folder called "Current Discography" within the current directory. You can use this for files of any type (maybe with a little adjusting), so it's something like a productivity version management tool.
 
-Here is the script on my [GitHub](https://github.com/elliotmangini/blog-python-automation-02).
-
-To run it-- navigate to the directory containing your many subdirectories which contain multiple versions of files-- place the script in that parent directory and run it from terminal using `python3 ExtractDiscography.py`.
-
-
-And here is the full sript here before we break it down:
+Here is the script on my [GitHub](https://github.com/elliotmangini/blog-python-automation-02) as well as the full sript here which I'm calling "Extract Discography":
 
 ```py
 import shutil
@@ -146,9 +141,21 @@ print(f"{bounce_count} Audio Bounces found within subfolders.")
 print(f"{found_count} Newest Bounces copied to {new_folder_path}.")
 ```
 
-Using the script we can go from this:
+Using the script I was able to go from this:
+
+![Screenshot of raw folder structure.](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oa9m9k27adhin2rfr2ob.png)
+
+Where I have thousands of audio files to look through...
 
 to this:
+
+
+![Screenshot of Current Discography Folder](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b4tkue2ukcyzpvhn5w1z.png)
+
+With our nice little report here:
+
+
+![Screenshot of Terminal Output](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ldnqs2y84arjnb37apgq.png)
 
 <h1>Challenges</h1>
 
